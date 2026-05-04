@@ -1,0 +1,30 @@
+# VirtualBox logs
+.VirtualBox
+
+# Node modules (if using frontend)
+node_modules/
+
+# Cache and temp files
+.cache/
+.temp/
+*.cache
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
