@@ -3,7 +3,6 @@ const {
   PublicKey,
   Transaction,
   SystemProgram,
-  computeProgramId,
 } = require("@solana/web3.js");
 const {
   getAssociatedTokenAddressSync,
